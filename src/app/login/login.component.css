@@ -1,0 +1,43 @@
+.image-container{
+    background: url('../../assets/images/cov.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+.form-box h4{
+    font-weight: bold;
+}
+.form-box img{
+ width:190px;
+}
+.in-put{
+    border-color: rgb(240, 88, 113);
+    border-radius: 10px;
+}
+h5{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn-google{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+h4{
+    font-family: 'Baloo Bhaina 2', cursive;  
+    color:rgb(240, 88, 113) ;
+}
+.in-btn{
+    border-radius: 10px;
+    font-weight: 200;
+}
+.form-box .btn-google img{
+    width: 20px;
+}

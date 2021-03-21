@@ -1,0 +1,30 @@
+.txtStyletrans{
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: rgb(238, 72, 93);
+   font-size: 60px;
+   text-align: center;;
+}
+.main2{
+    padding-top: 50px;
+    margin-top: 106px;
+    height: 700px;
+
+}
+.textTr{
+    color: rgb(244, 170, 175);
+}
+footer{
+    background-color: rgb(238, 72, 93);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(247, 247, 247);
+    
+}
+@media (max-width: 600px) {
+    footer{
+        margin-top: 900px;
+        bottom: 0;
+    }
+}

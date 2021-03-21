@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&family=Fredoka+One&family=Handlee&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <app-master-page-dash></app-master-page-dash>
+    <div class="container" *ngFor= " let con of continents">
+      <div class="col-md-12 text-center">
+        <h2 class="pt-3"> {{con.continent}}</h2>
+       </div>
+            <div class="row row2" >
+               
+            
+                <div class="col-md-3">
+                   
+                  <p> CONFIRMED</p>
+                  <h1 class="WORLDWIDE-CASES text-primary">{{con.cases | number}}</h1>     
+                </div>
+                <div class="col-md-3">
+                      
+                  <p>DEATHS</p>
+                  <h1 class="DEATHS text-danger">{{con.deaths | number}}</h1>     
+                </div>
+                <div class="col-md-3">
+                    
+                  <p>RECOVERED</p>
+                  <h1 class="RECOVERED text-success">{{con.recovered | number}}</h1>     
+                </div>
+                <div class="col-md-3">
+                   
+                    <p>ACTIVE</p>
+                    <h1 class="RECOVERED text-warning">{{con.active | number}}</h1>     
+                  </div>
+              </div>
+
+              
+           </div>
+</body>
+</html>

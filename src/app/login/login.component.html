@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 d-none d-md-block image-container">
+            </div>
+            
+            <div class="col-lg-6 col-md-6 form-container">
+                
+                 <div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
+                    <flash-messages></flash-messages>
+                     <div class="logo mb-3">
+                        <img src="../../assets/images/corona.png" class="img-fluid" alt="">
+                     </div>
+                     <div class="heading mb-4">
+                         <h4>Login into your account</h4>
+                     </div>
+                     <form (ngSubmit)="onLogin()" class="form-group">
+                         <input type="email" class="form-control in-put" placeholder="email" name="email" [(ngModel)]="email" required>
+                         
+                         <br>
+                         <input type="password" class="form-control in-put" placeholder="password"  name="password" [(ngModel)]="password"> <br>
+                         <input type="submit" value="Sign in" class="btn btn-danger form-control in-btn">
+                     </form>
+                     <div class="heading mb-4">
+                        <hr style="width: 100px; background-size: 5px;">
+                    </div>
+                    <a id="google-button" class="btn btn-block btn-social btn-google">
+                        <img src="../../assets/images/google.png"  class="google" alt="">  Sign in with Google
+                      </a>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

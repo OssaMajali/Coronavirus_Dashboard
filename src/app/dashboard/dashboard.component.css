@@ -1,0 +1,55 @@
+body{
+    background-color: #f8f8fb;
+}
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgb(11, 37, 75,.10);
+}
+.circle{
+    width: 60px;
+    height: 60px;
+    background-color: #f8f8fb;
+    color: black;
+    
+}
+.circle i{
+    font-size: 30px;
+}
+
+.p-card h5{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 30px;
+
+}
+.p-card small{
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+ h2{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: #492e56;
+}
+select{
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 .5rem 1rem rgb(11, 37, 75,.10);
+}
+#canva{
+    height: 430px;
+    
+}
+.car3{
+    background-color: #f7fff4;
+}
+.car2{
+    background-color: #fbfbfb;
+}

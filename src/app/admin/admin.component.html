@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light ">
+     
+      <a class="navbar-brand " href="#"> <i class="fa fa-envelope " aria-hidden="true"></i> Contact Page</a>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active" *ngIf="isLoggedIn">
+              <a class="nav-link" >{{userLoggedIn}}</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <i class="fa fa-sign-in" aria-hidden="true"></i> My Profile
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" (click)="onLogOut()" routerLink="/login">logOut</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+
+
+
+
+<!--
+      <div  class="list-group-item list-group-item-action" *ngFor= "let contact of contacts |async">
+    <div class="container">
+        <div class="d-flex w-100 justify-content-between Name">
+          <h5 class="mb-1">{{contact.name}}</h5>
+          <div class="btn btn-danger">
+            Delete</div>
+        </div>
+        <p class="mb-1">{{contact.message}}</p>
+        <small>{{contact.email}}</small>
+    </div>
+      </div> -->
+
+
+
+
+
+      <!--
+      <div class="all">
+       
+        <h1 class="text-center"> <i class="fa fa-envelope iconMsg" aria-hidden="true"></i> <br>
+          Messages </h1>
+        <hr style="background-color: rgb(145, 60, 121); width: 80px; height: 3px; margin-bottom: 50px;">
+      <div  class="list-group-item list-group-item-action" >
+        <div class="container">
+            <div class="d-flex w-100 justify-content-between Name">
+              <h5 class="mb-1"> <i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+              
+              <div class="btn btn-danger">
+                 Delete</div>
+            </div>
+            
+            <p class="mb-1 lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+            
+            <small>ossama.majali1@gmail.com</small>
+          
+        </div>
+          </div>
+          <div  class="list-group-item list-group-item-action" >
+            <div class="container">
+                <div class="d-flex w-100 justify-content-between Name">
+                  <h5 class="mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+                  <div class="btn btn-danger">
+                    Delete</div>
+                </div>
+                <p class="mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+                <small>ossama.majali1@gmail.com</small>
+            </div>
+              </div>
+              <div  class="list-group-item list-group-item-action" >
+                <div class="container">
+                    <div class="d-flex w-100 justify-content-between Name">
+                      <h5 class="mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+                      <div class="btn btn-danger">
+                        Delete</div>
+                    </div>
+                    <p class="mb-1 lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+                    <small>ossama.majali1@gmail.com</small>
+                </div>
+                  </div>
+                  <div  class="list-group-item list-group-item-action" >
+                    <div class="container">
+                        <div class="d-flex w-100 justify-content-between Name">
+                          <h5 class="mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+                          <div class="btn btn-danger">
+                            Delete</div>
+                        </div>
+                        <p class="mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+                        <small>ossama.majali1@gmail.com</small>
+                    </div>
+                      </div>
+                      <div  class="list-group-item list-group-item-action" >
+                        <div class="container">
+                            <div class="d-flex w-100 justify-content-between Name">
+                              <h5 class="mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+                              <div class="btn btn-danger">
+                                Delete</div>
+                            </div>
+                            <p class="mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+                            <small>ossama.majali1@gmail.com</small>
+                        </div>
+                      </div>
+                      <div  class="list-group-item list-group-item-action" >
+                        <div class="container">
+                            <div class="d-flex w-100 justify-content-between Name">
+                              <h5 class="mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+                              <div class="btn btn-danger">
+                                Delete</div>
+                            </div>
+                            <p class="mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+                            <small>ossama.majali1@gmail.com</small>
+                        </div>
+                          </div>
+                          <div  class="list-group-item list-group-item-action" >
+                            <div class="container">
+                                <div class="d-flex w-100 justify-content-between Name">
+                                  <h5 class="mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Ossama Majali</h5>
+                                  <div class="btn btn-danger">
+                                    Delete</div>
+                                </div>
+                                <p class="mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam itaque nulla optio ullam, suscipit quisquam, quo ducimus atque fugiat fuga distinctio libero. Est labore rerum, reiciendis tempore dolores eaque tempora.</p>
+                                <small>ossama.majali1@gmail.com</small>
+                            </div>
+                              </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="all">
+  
+  <h1 class="text-center"> <i class="fa fa-envelope iconMsg" aria-hidden="true"></i> <br>
+    Messages </h1>
+  <hr style="background-color: rgb(145, 60, 121); width: 80px; height: 3px; margin-bottom: 50px;">
+<div class="container">
+<div class="row">
+               <div class="card-deck col-md-6 "  *ngFor= "let contact of contacts |async">
+                  <div class="card">
+                    <i class="fa fa-envelope ic" aria-hidden="true"></i>
+                    
+                       <div class="card-body bodyText">
+                              <h5 class="card-title text-center">{{contact.name}} </h5>
+                              <hr style="background-color: rgb(56, 3, 56); height: 5px; width: 70px; border-radius: 25px;">
+                               <p class="card-text">{{contact.message |slice:0:70}} ...</p>
+                              
+                               <small>{{contact.email}}</small>
+                       </div>
+                       <button class="btn btn-warning">
+                        <i class="fa fa-id-card" aria-hidden="true"></i> 
+                        Delete</button> 
+                        
+               </div>
+               </div>         
+  </div>  
+</div>
+</div>           
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                          -->
+<div class="all">                 
+<div class="container">
+  <h1 class="text-center"> <i class="fa fa-envelope iconMsg" aria-hidden="true"></i> <br>
+    Messages </h1>
+  <hr style="background-color: #ED4C67; width: 80px; height: 3px; margin-bottom: 50px;">
+     <div class="course"  *ngFor= "let contact of contacts | async">
+       <div class="preview">
+         <h6>Name</h6>
+         <h2 class="name">{{contact.name |uppercase}}</h2>
+       </div>
+       <div class="info">
+         <div class="prgress-wrapper">
+           <h6>Message</h6>
+           <h2>{{contact.email}}</h2>
+           <p class="p-trunc ">{{contact.message}}</p>
+           
+           <button class="btnn" (click)="deleteContact(contact)">Delete</button>
+         </div>
+       </div>
+     </div>
+
+</div>
+</div>    

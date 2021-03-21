@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Bhaina+2:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Bhaina+2:wght@700&family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+  <app-master-page-dash></app-master-page-dash>
+  <div class="card-data mt-4">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+          <h2 class="text-left mb-4 ml-3">Corona virus tracker</h2></div>
+        <div class="col-md-4">
+          <div class="ml-auto">
+            <select class="custom-select" #input  (change)="updateData(input.value)" >
+              <option value="all" >All</option>
+              <option value="{{conn.country}}" *ngFor= "let conn of countries" >{{conn.country}}</option>
+            </select>
+          </div>
+        </div>
+        </div>
+          <div class="row">
+              <div class="col-lg-3">
+                <div class="card border-0 ">               
+                    <div class="card-body d-flex justify-content-center ">
+                      <div class="circle rounded-circle d-flex mr-3 align-self-center">
+                          <i class="icon ion-md-trending-up text-success align-self-center mx-auto lead"></i>
+                       </div>                    
+                      <div class="p-card text-center">
+                        <h5 class="mb-0 text-success">{{posts.cases | number}}</h5>
+                        <small class="lead">cases</small>
+                      </div>
+                    </div>
+                  </div>
+              </div> 
+              <div class="col-lg-3">
+                <div class="card border-0">               
+                    <div class="card-body d-flex justify-content-center">
+                      <div class="circle rounded-circle d-flex mr-3 align-self-center">
+                          <i class="icon ion-md-body text-primary align-self-center mx-auto lead"></i>
+                       </div>                    
+                      <div class="p-card text-center">
+                        <h5 class="mb-0 text-primary">{{posts.recovered | number}}</h5>
+                        <small class="lead">recovered</small>
+                      </div>
+                    </div>
+                  </div>
+              </div> 
+              <div class="col-lg-3">
+                <div class="card border-0">               
+                    <div class="card-body d-flex justify-content-center">
+                      <div class="circle rounded-circle d-flex mr-3 align-self-center">
+                          <i class="icon ion-md-pulse text-danger align-self-center mx-auto lead"></i>
+                       </div>                    
+                      <div class="p-card text-center">
+                        <h5 class="mb-0 text-danger">{{posts.deaths | number}}</h5>
+                        <small class="lead">deaths</small>
+                      </div>
+                    </div>
+                  </div>
+              </div> 
+              <div class="col-lg-3">
+                <div class="card border-0">               
+                    <div class="card-body d-flex justify-content-center">
+                      <div class="circle rounded-circle d-flex mr-3 align-self-center">
+                          <i class="icon ion-md-contacts text-warning align-self-center mx-auto lead"></i>
+                       </div>                    
+                      <div class="p-card text-center">
+                        <h5 class="mb-0 text-warning">{{posts.active | number}}</h5>
+                        <small class="lead">actives</small>
+                      </div>
+                    </div>
+                  </div>
+              </div>         
+            </div>
+          </div>
+      </div>
+     <div class="container">
+       <div class="row">
+       <div class="col-lg-12">
+       <div class="card" id="canva" >
+        <canvas id="myChart" height="400px" ></canvas>     
+       </div>  
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8">
+      <div class="card car2 p-3" id="canva" >
+       <canvas id="myChart2" height="400px" ></canvas>     
+      </div>  
+     </div>
+     <div class="col-lg-4">
+      <div class="card car3 pt-5" id="canva" >
+       <canvas id="myChart1" height="300px" ></canvas>     
+      </div>  
+     </div>
+   </div>
+
+   <div class="row mt-2">
+    <div class="col-md-12">
+        <div class="card p-3" id="canva" >
+            <canvas id="myChart5" height="400px" ></canvas>     
+           </div>  
+    </div>
+    
+</div>
+     </div>
+
+</body>
+</html>

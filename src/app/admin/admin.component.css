@@ -1,0 +1,131 @@
+.navbar {
+    background-color:#ED4C67;
+
+}
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Baloo Bhaina 2', cursive;
+     color: white; 
+    
+}
+.navbar .navbar-brand{
+    color: white; 
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 30px;
+    
+}
+h5{
+    font-family: 'Baloo Bhaina 2', cursive;  
+    color: rgb(145, 60, 121);
+    font-weight: bold;
+    
+}
+
+
+
+.all{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+h1{
+    margin-bottom: 40px;
+    color: #ED4C67;
+    font-weight: bold;
+}
+.iconMsg{
+    
+    font-size: 60px;
+}
+
+
+/*hbvjsgvhsghjdghghgjsgd*/
+.course{
+    border-radius: 10px;
+    box-shadow: 6px 10px 19px rgb(0,0,0,.2);
+    display: flex;
+    max-width: 100%;
+    overflow: hidden; 
+    margin-top: 30px;
+}
+.course h6{
+    opacity: .6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.course h2{
+    letter-spacing: 1px;
+    margin: 10px 0;
+    font-weight: bold;  
+}
+.course .name{
+        font-family: 'Baloo Bhaina 2', cursive;
+        text-align: center;
+
+}
+.preview{
+  background: #ED4C67; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ED4C67, #ff4b2b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ED4C67, #ff4b2b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info{
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+.info p{
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Baloo Bhaina 2', cursive;
+    text-align: justify;
+}
+.info h2{
+    font-size: 30px;
+}
+.btnn{
+    background-color:#ED4C67;
+    border: 1px solid transparent;
+    box-shadow: 6px 5px 10px rgb(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.btnn:hover{
+    background: #fff;
+    color:#ED4C67 ;
+    border: 1px solid #ED4C67;
+
+}
+@media(max-width:768px){
+    .course{
+        flex-direction: column;
+        width: 90%;
+    }
+    .preview{
+        width: 100%;
+    }
+    .preview h2{
+        margin: 10px 0 0;
+    }
+    .info h2{
+        margin-top: 20px;
+    }
+    .info p{
+        margin-bottom: 50px;
+    }
+    .btnn{
+        padding: 10px 15px;
+        
+        font-size: 14px;
+    }
+}

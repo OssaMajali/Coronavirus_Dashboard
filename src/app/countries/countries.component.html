@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <app-master-page-dash></app-master-page-dash>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-light">
+                <tr class= "align-items-start text-center"> 
+                  <th scope="col" >Top</th>
+                  <th scope="col" >Flag</th>
+                  <th scope="col" >Country</th>
+                  <th scope="col" >Confirmed </th>
+                  <th scope="col">Today</th>
+                  <th scope="col" >Deaths</th>
+                  <th scope="col" > Today</th>
+                  <th scope="col" >Recovered</th>
+                  <th scope="col" >Active</th>
+                  <th scope="col" >Continent</th>
+                
+                  
+                </tr>
+              </thead> 
+            <tbody class="text-center font-weight-bold">
+              <tr *ngFor= "let con of country | sortBy: 'desc':'cases' let index = index">            
+                <td class="text-dark">{{index+1}}</td>
+                <td><img src="{{con.countryInfo.flag}}"
+                  class="img-fluid" style="width: 25px;"></td>
+                <td>{{con.country}}</td>
+                <td class="text-primary">{{con.cases | number}}</td>
+                <td class="text-primary">{{con.todayCases | number}}</td>
+                <td class="text-danger">{{con.deaths | number}}</td>
+                <td class="text-danger">{{con.todayDeaths | number}}</td>
+                <td class="text-success">{{con.recovered | number}}</td>
+                <td class="text-warning">{{con.active | number}}</td>
+                <td class="text-info">{{con.continent}}</td>
+               
+              </tr>            
+            </tbody>
+        </table>
+      </div>
+</body>
+</html>

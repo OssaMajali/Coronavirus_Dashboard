@@ -1,0 +1,26 @@
+.nav-top{
+    border-top: 5px solid #eb4458;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    letter-spacing: 2px;
+}
+.title-one{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: #492e56;
+}
+.navbar{
+    padding: 10px;
+    
+    background: #eb4458;
+}
+.navbar-nav a {
+    text-transform: uppercase;
+    
+    color: white;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar-light .navbar-nav .nav-link {
+    text-align: center;
+}
